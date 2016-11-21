@@ -1,0 +1,21 @@
+@main-color: #dadada;
+body{
+    .table{
+        display: table;
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 5px;
+        .row{
+            display: table-row;
+            width: 100%;
+            padding: 0;
+            margin: 0;
+            .col{
+                display: table-cell;
+                background-clip: padding-box;
+                background-color: @main-color;
+                padding: 10px;
+            }
+        }
+    }
+}
