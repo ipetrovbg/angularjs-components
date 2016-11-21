@@ -1,0 +1,10 @@
+<div ng-click="$ctrl.cardWasSelected($ctrl.user)" class="github-user-image">
+    <div class="hover-username">
+        <div>
+            <h4 class="name" ng-bind="$ctrl.user.name"></h4>
+            <h6 class="email" data-ng-bind="$ctrl.user.email"></h6>
+            <h6 ng-bind="$ctrl.user.login"></h6>
+        </div>
+    </div>
+    <img ng-src="{{ $ctrl.user.avatar_url }}" alt="{{ $ctrl.user.name }}">
+</div>

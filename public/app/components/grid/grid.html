@@ -1,0 +1,8 @@
+<div class="table">
+    <div class="row" ng-repeat="row in $ctrl.rows">
+        <grid-row cols="$ctrl.cols" row="$index" on-element-was-clicked="$ctrl.receiveClick(col, row)"></grid-row>
+    </div>
+</div>
+<div class="messages">
+    {{ $ctrl.grid | json }}
+</div>
