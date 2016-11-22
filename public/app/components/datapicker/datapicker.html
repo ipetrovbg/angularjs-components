@@ -1,0 +1,28 @@
+<!--<div class="datapicker">
+    <div class="wrapper">
+        <h2 class="datepicher-header">{{ $ctrl.month }}</h2>
+    <div class="days-wrapper">
+        <span class="day" ng-class="$ctrl.currentDay === day ? 'selected' : ''" data-ng-click="$ctrl.dateWasSelected(day)" ng-repeat="day in $ctrl.numberDays">
+            {{ day }}
+        </span>
+    </div>
+    </div>
+</div>-->
+{{ $ctrl.selected | json }}
+<div class="datapicker">
+    <div class="wrapper">
+        <button ng-click="$ctrl.prevMonth($ctrl.month)"><</button>
+        <button ng-click="$ctrl.nextMonth($ctrl.month)">></button>
+        <h2 class="datepicher-header">{{ $ctrl.month }} {{ $ctrl.year }}</h2>
+        <table class="table table-bordered">
+            <tr>
+                <th ng-repeat='wd in ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]'>{{ wd }}</th>
+            </tr>
+            <tr ng-repeat="w in $ctrl.calendar track by $index">
+                <td data-ng-click="$ctrl.dateWasSelected(d)" ng-class="$ctrl.currentDay === d ? 'selected' : ''" ng-repeat="d in w.week track by $index">
+                    <span ng-if="d">{{ d }}</span>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>

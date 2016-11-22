@@ -56,3 +56,34 @@ body .github-user-image .hover-username {
 body .github-user-image:hover .hover-username {
   visibility: visible;
 }
+body .datapicker {
+  max-width: 245px;
+  border: 1px solid #424344;
+  max-height: 250px;
+  display: flex;
+  align-items: center;
+  vertical-align: middle;
+  justify-content: center;
+  box-sizing: border-box;
+}
+body .datapicker td {
+  border: 1px solid #424344;
+  cursor: pointer;
+}
+body .datapicker .datepicher-header {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+body .datapicker .day {
+  width: 27px;
+  display: flex;
+  align-items: center;
+  vertical-align: middle;
+  justify-content: center;
+  float: left;
+}
+body .datapicker .selected {
+  background-color: #f47d42;
+  color: #fcfcfc;
+}

@@ -1,6 +1,7 @@
 @main-color: #dadada;
 @font-color: #424344;
 @hover-background: #fcfcfc;
+@selected: #f47d42;
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 body{
     .table{
@@ -62,6 +63,39 @@ body{
                 visibility: visible;
                 
             }
+        }
+    }
+
+    .datapicker{
+        td{
+            border: 1px solid @font-color;
+            cursor: pointer;
+        }
+        
+        max-width: 245px;
+        border: 1px solid @font-color;
+        max-height: 250px;
+        display: flex;
+        align-items: center;
+        vertical-align: middle;
+        justify-content: center;
+        box-sizing: border-box;
+        .datepicher-header{
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+        .day{
+            width: 27px;
+            display: flex;
+            align-items: center;
+            vertical-align: middle;
+            justify-content: center;
+            float: left;
+        }
+        .selected{
+            background-color: @selected;
+            color: @hover-background;
         }
     }
 }
